@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Yönetim Paneli";
+}
+
+<section class="admin-shell" data-page="admin-dashboard">
+    <partial name="_AdminNav" />
+    <div class="admin-content">
+        <div class="admin-heading">
+            <div>
+                <p class="eyebrow">Yönetim</p>
+                <h1>Genel Bakış</h1>
+            </div>
+            <a class="btn btn-outline-primary secondary-action" asp-controller="Admin" asp-action="Products">Ürün yönetimi</a>
+        </div>
+        <div class="metric-grid" data-dashboard-metrics></div>
+        <div class="admin-grid">
+            <section class="admin-card">
+                <h2>Düşük stok</h2>
+                <div data-low-stock></div>
+            </section>
+            <section class="admin-card">
+                <h2>Son siparişler</h2>
+                <div data-recent-orders></div>
+            </section>
+        </div>
+    </div>
+</section>

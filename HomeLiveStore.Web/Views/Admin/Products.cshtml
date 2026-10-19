@@ -1,0 +1,53 @@
+@{
+    ViewData["Title"] = "Ürün Yönetimi";
+}
+
+<section class="admin-shell" data-page="admin-products">
+    <partial name="_AdminNav" />
+    <div class="admin-content">
+        <div class="admin-heading">
+            <div>
+                <p class="eyebrow">Yönetim</p>
+                <h1>Ürünler</h1>
+            </div>
+            <button class="btn btn-primary primary-action" type="button" data-new-product>Yeni ürün</button>
+        </div>
+        <div class="admin-toolbar">
+            <div class="admin-search"><label for="admin-product-search">Ürün ara</label>
+            <input class="form-control" id="admin-product-search" type="search" data-admin-product-search placeholder="Ürün adı veya barkod" autocomplete="off" maxlength="250" /></div>
+            <div class="pager" data-admin-product-pager></div>
+        </div>
+        <form class="admin-form" data-product-form hidden>
+            <h2 class="admin-form-title">Ürün Bilgileri</h2>
+            <input type="hidden" name="id" />
+            <div class="form-grid">
+                <label>Ürün adı<input class="form-control" name="definition" maxlength="250" required /></label>
+                <label>Kategori<select class="form-select" name="categoryId" required></select></label>
+                <label>Barkod<input class="form-control" name="barcode" maxlength="30" required /></label>
+                <label>Kapak görseli<input class="form-control" name="coverPhoto" maxlength="400" placeholder="/images/koltuk.svg" /></label>
+                <label>Fiyat (KDV hariç)<input class="form-control" name="price" type="number" min="0.01" max="999999999" step="0.01" required /></label>
+                <label>KDV (%)<input class="form-control" name="vatRate" type="number" min="0" max="100" step="1" required /></label>
+                <label>Stok<input class="form-control" name="stockAmount" type="number" min="0" step="1" required /></label>
+                <label class="check-line"><input class="form-check-input" name="isActive" type="checkbox" checked /> Aktif</label>
+            </div>
+            <fieldset class="product-photo-fields">
+                <legend>Diğer ürün görselleri</legend>
+                <p class="muted" id="product-photo-help">Kapak görseline ek olarak en fazla 10 görsel ekleyebilirsiniz. /images/ altında bir dosya yolu veya HTTPS görsel adresi kullanın.</p>
+                <div class="product-photo-list" data-product-photo-list></div>
+                <button class="btn btn-outline-primary secondary-action" type="button" data-add-product-photo>Görsel ekle</button>
+            </fieldset>
+            <label>Açıklama<textarea class="form-control" name="description" rows="3" maxlength="1500"></textarea></label>
+            <div class="form-actions">
+                <button class="btn btn-primary primary-action" type="submit">Kaydet</button>
+                <button class="btn btn-outline-primary secondary-action" type="button" data-cancel-form>Vazgeç</button>
+            </div>
+        </form>
+        <p class="form-note" data-admin-message aria-live="polite" hidden></p>
+        <div class="table-wrap">
+            <table class="table data-table admin-products-table">
+                <thead><tr><th>Ürün</th><th>Kategori</th><th>Fiyat</th><th>Stok</th><th>Durum</th><th>İşlem</th></tr></thead>
+                <tbody data-admin-products-list></tbody>
+            </table>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,34 @@
+@{
+    ViewData["Title"] = "Kategori Yönetimi";
+}
+
+<section class="admin-shell" data-page="admin-categories">
+    <partial name="_AdminNav" />
+    <div class="admin-content">
+        <div class="admin-heading">
+            <div>
+                <p class="eyebrow">Yönetim</p>
+                <h1>Kategoriler</h1>
+            </div>
+            <button class="btn btn-primary primary-action" type="button" data-new-category>Yeni kategori</button>
+        </div>
+        <form class="admin-form" data-category-form hidden>
+            <h2 class="admin-form-title">Kategori Bilgileri</h2>
+            <input type="hidden" name="id" />
+            <label>Kategori adı<input class="form-control" name="definition" maxlength="250" required /></label>
+            <label>Açıklama<textarea class="form-control" name="description" rows="3" maxlength="1500"></textarea></label>
+            <label class="check-line"><input class="form-check-input" name="isActive" type="checkbox" checked /> Aktif</label>
+            <div class="form-actions">
+                <button class="btn btn-primary primary-action" type="submit">Kaydet</button>
+                <button class="btn btn-outline-primary secondary-action" type="button" data-cancel-form>Vazgeç</button>
+            </div>
+        </form>
+        <p class="form-note" data-admin-message aria-live="polite" hidden></p>
+        <div class="table-wrap">
+            <table class="table data-table">
+                <thead><tr><th>Kategori</th><th>Açıklama</th><th>Durum</th><th>İşlem</th></tr></thead>
+                <tbody data-admin-categories-list></tbody>
+            </table>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 390" role="img" aria-label="Battaniye">
+  <rect width="520" height="390" fill="#f8f3ea"/>
+  <path d="M110 88h300c34 0 62 28 62 62v152H110z" fill="#174d38"/>
+  <path d="M80 128h320c36 0 64 29 64 64v110H80z" fill="#28614a"/>
+  <path d="M112 152h312M112 196h312M112 240h312" stroke="#dfeadf" stroke-width="10"/>
+  <path d="M144 130v178M214 130v178M284 130v178M354 130v178" stroke="#b86b4b" stroke-width="8"/>
+</svg>

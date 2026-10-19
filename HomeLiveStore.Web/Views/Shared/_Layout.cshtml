@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="csrf-token" content="" />
+    <meta name="maximum-order-quantity" content="@HomeLiveStore.Application.DTOs.BasketLineRequest.MaximumQuantity" />
+    <title>@ViewData["Title"] - Home &amp; Living Store</title>
+    <meta name="theme-color" content="#f7f6f2" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Admin" ? "admin-page" : "store-page")">
+    <a class="skip-link" href="#main">İçeriğe geç</a>
+    <header class="site-header">
+        <nav class="site-nav container store-container" aria-label="Ana menü">
+            <a class="brand" asp-area="" asp-controller="Home" asp-action="Index" aria-label="Home &amp; Living Store ana sayfa">
+                <span class="brand-name">Home &amp; Living Store</span>
+                <span class="brand-caption">EV &amp; YAŞAM</span>
+            </a>
+            <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="primary-menu">Menü</button>
+            <div class="header-menu" id="primary-menu" data-menu>
+                <div class="nav-links">
+                    <a asp-controller="Home" asp-action="Index">Ana Sayfa</a>
+                    <a asp-controller="Products" asp-action="Index">Ürünler</a>
+                    <a asp-controller="Orders" asp-action="Index" data-auth-link>Siparişlerim</a>
+                    <a asp-controller="Admin" asp-action="Index" data-manager-link hidden>Yönetim</a>
+                </div>
+                <div class="nav-account" data-account-area>
+                    <a class="ghost-link" asp-controller="Account" asp-action="Login">Giriş Yap</a>
+                    <a class="button-link" asp-controller="Account" asp-action="Register">Üye Ol</a>
+                </div>
+                <a class="cart-link" asp-controller="Cart" asp-action="Index">
+                    <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                        <path d="M3 4h2l2.2 10.4A2 2 0 0 0 9.2 16H19a2 2 0 0 0 2-1.6L22 8H6" />
+                        <circle cx="10" cy="20" r="1" />
+                        <circle cx="19" cy="20" r="1" />
+                    </svg>
+                    <span>Sepet</span>
+                    <span class="cart-badge" data-cart-count aria-live="polite" aria-atomic="true">0</span>
+                </a>
+            </div>
+        </nav>
+        <div class="category-bar">
+            <nav class="category-nav container store-container" aria-label="Ürün kategorileri" data-category-nav>
+                <a asp-controller="Products" asp-action="Index">Tüm Ürünler</a>
+            </nav>
+        </div>
+    </header>
+    @* Aynı kapsayıcı, marka ve bütün sayfa başlıklarının sol kenarını eşitler. *@
+    <main id="main" class="page-shell container store-container" role="main">
+        @RenderBody()
+    </main>
+    <footer class="site-footer">
+        <div class="footer-row container store-container">
+            <div class="footer-identity">
+                <a class="footer-wordmark" asp-controller="Home" asp-action="Index">Home &amp; Living Store</a>
+                <span>Ev &amp; Yaşam Mağazası</span>
+            </div>
+            <div class="footer-links">
+                <a asp-controller="Products" asp-action="Index">Ürünler</a>
+                <a asp-controller="Orders" asp-action="Index">Siparişlerim</a>
+                <a asp-controller="Home" asp-action="Privacy">Gizlilik</a>
+                <span class="footer-note">Demo proje · Gerçek ödeme alınmaz.</span>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

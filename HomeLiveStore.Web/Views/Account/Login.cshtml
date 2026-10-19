@@ -1,0 +1,19 @@
+@{
+    ViewData["Title"] = "Giriş Yap";
+}
+
+<section class="auth-shell" data-page="login" data-return-url="@ViewData["ReturnUrl"]">
+    <div class="page-intro"><p class="eyebrow">Hesabım</p><h1>Giriş Yap</h1><p>Siparişlerinizi görüntülemek ve alışverişe devam etmek için giriş yapın.</p></div>
+    <div class="auth-layout">
+        <form class="auth-card" data-login-form>
+            <label class="form-label" for="login-email">E-posta</label>
+            <input class="form-control" id="login-email" name="email" type="email" autocomplete="email" placeholder="ornek@eposta.com" required />
+            <label class="form-label" for="login-password">Şifre</label>
+            <input class="form-control" id="login-password" name="password" type="password" autocomplete="current-password" required />
+            <button class="btn btn-primary primary-action full-width" type="submit">Giriş Yap</button>
+            <p class="form-note" data-auth-message aria-live="polite"></p>
+            <a class="auth-switch" asp-controller="Account" asp-action="Register">Hesabınız yok mu? Üye Ol</a>
+        </form>
+        <aside class="auth-copy"><h2>Home &amp; Living Store'a hoş geldiniz.</h2><p>Ev, mutfak ve ofis için seçtiğiniz ürünleri hesabınız üzerinden sipariş edebilirsiniz.</p><img src="~/images/editorial/home-still-life.png" alt="Ev ve yaşam ürünlerinden bir seçki" /></aside>
+    </div>
+</section>

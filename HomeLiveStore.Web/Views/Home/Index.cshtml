@@ -1,0 +1,23 @@
+@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+
+<section class="home-banners" data-page="home">
+    <div class="store-hero">
+        <div class="hero-copy">
+            <h1>Günlük yaşam için<br />güzel seçimler.</h1>
+            <a class="btn btn-primary primary-action" asp-controller="Products" asp-action="Index">Ürünleri Keşfet</a>
+        </div>
+        <figure class="hero-visual"><img src="~/images/editorial/home-still-life.png" alt="Ahşap masa üzerinde ev ve yaşam ürünleri" fetchpriority="high" /></figure>
+    </div>
+    <div class="office-banner">
+        <div class="office-copy"><h2>Çalışma köşenize<br />küçük bir dokunuş.</h2><a asp-controller="Products" asp-action="Index" data-office-link>Ofis ürünleri →</a></div>
+        <img src="~/images/products/lamp.png" alt="Çalışma masası için masa lambası" />
+    </div>
+</section>
+<section>
+    <div class="section-heading"><h2>Mağazamızdan Seçtiklerimiz</h2><a class="text-link" asp-controller="Products" asp-action="Index">Tümünü Gör →</a></div>
+    <div class="product-grid featured-grid" data-featured-products aria-live="polite"></div>
+    <div class="state-card" data-featured-empty hidden>Şu anda gösterilecek ürün bulunmuyor.</div>
+</section>
+<section class="collection-note"><h2>Evinizde, mutfağınızda, çalışma köşenizde.</h2><p>Günlük kullanıma uygun ürünleri keşfedin.</p></section>

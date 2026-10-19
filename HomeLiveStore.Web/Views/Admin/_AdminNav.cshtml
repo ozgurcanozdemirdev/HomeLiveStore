@@ -1,0 +1,12 @@
+@{
+    var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+}
+<nav class="admin-nav" aria-label="Mağaza yönetimi">
+    <p class="admin-nav-label">MAĞAZA YÖNETİMİ</p>
+    <a asp-controller="Admin" asp-action="Index" aria-current="@(currentAction == "Index" ? "page" : null)">Genel Bakış</a>
+    <a asp-controller="Admin" asp-action="Products" aria-current="@(currentAction == "Products" ? "page" : null)">Ürünler</a>
+    <a asp-controller="Admin" asp-action="Categories" aria-current="@(currentAction == "Categories" ? "page" : null)">Kategoriler</a>
+    <a asp-controller="Admin" asp-action="Orders" aria-current="@(currentAction == "Orders" ? "page" : null)">Siparişler</a>
+    <a asp-controller="Admin" asp-action="Users" aria-current="@(currentAction == "Users" ? "page" : null)">Kullanıcılar</a>
+    <a class="admin-store-link" asp-controller="Home" asp-action="Index">Mağazaya Dön →</a>
+</nav>

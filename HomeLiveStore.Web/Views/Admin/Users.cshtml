@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Kullanıcılar";
+}
+
+<section class="admin-shell" data-page="admin-users">
+    <partial name="_AdminNav" />
+    <div class="admin-content">
+        <div class="admin-heading">
+            <div>
+                <p class="eyebrow">Yönetim</p>
+                <h1>Kullanıcılar</h1>
+            </div>
+        </div>
+        <div class="table-wrap">
+            <table class="table data-table">
+                <thead><tr><th>Ad Soyad</th><th>E-posta</th><th>Rol</th></tr></thead>
+                <tbody data-admin-users-list></tbody>
+            </table>
+        </div>
+    </div>
+</section>

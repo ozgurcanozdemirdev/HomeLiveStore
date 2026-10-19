@@ -1,0 +1,9 @@
+Yönetici
+E-posta: admin@homelivestore.local
+Şifre: Admin123!
+
+Müşteri
+E-posta: musteri@homelivestore.local
+Şifre: Musteri123!
+
+Yönetim: /Admin

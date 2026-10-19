@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 680" role="img" aria-label="Ev ve yaşam ürünleri">
+  <rect width="900" height="680" fill="#efe2cf"/>
+  <path d="M0 560h900v120H0z" fill="#d8c4aa"/>
+  <path d="M95 82h710v418H95z" fill="#fff7eb" stroke="#174d38" stroke-width="6"/>
+  <path d="M152 150h190v150H152z" fill="#dfeadf" stroke="#174d38" stroke-width="5"/>
+  <path d="M558 128h178v214H558z" fill="#f8f3ea" stroke="#b86b4b" stroke-width="5"/>
+  <path d="M194 406c0-42 34-76 76-76h260c42 0 76 34 76 76v82H194z" fill="#174d38"/>
+  <path d="M154 438h492v92H154z" rx="24" fill="#28614a"/>
+  <path d="M207 531h58v62h-58zM538 531h58v62h-58z" fill="#22362d"/>
+  <path d="M655 430h78v128h-78z" fill="#c89642" stroke="#22362d" stroke-width="5"/>
+  <path d="M665 406c18-54 72-54 90 0" fill="none" stroke="#174d38" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="697" cy="370" r="36" fill="#b86b4b"/>
+  <path d="M290 268c56-62 122-62 198 0" fill="none" stroke="#b86b4b" stroke-width="14" stroke-linecap="round"/>
+  <path d="M292 288h194v64H292z" fill="#fffaf2" stroke="#174d38" stroke-width="5"/>
+  <circle cx="742" cy="512" r="28" fill="#fffaf2" stroke="#174d38" stroke-width="5"/>
+</svg>

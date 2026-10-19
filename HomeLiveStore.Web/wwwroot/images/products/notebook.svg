@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 390" role="img" aria-label="Defter">
+  <rect width="520" height="390" fill="#efe2cf"/>
+  <rect x="144" y="62" width="240" height="278" rx="8" fill="#174d38"/>
+  <rect x="168" y="82" width="192" height="238" rx="6" fill="#fffaf2"/>
+  <path d="M204 134h118M204 182h118M204 230h118" stroke="#b86b4b" stroke-width="10" stroke-linecap="round"/>
+  <path d="M144 104h-34M144 158h-34M144 212h-34M144 266h-34" stroke="#22362d" stroke-width="10" stroke-linecap="round"/>
+</svg>

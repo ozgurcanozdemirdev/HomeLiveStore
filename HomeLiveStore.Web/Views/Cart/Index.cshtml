@@ -1,0 +1,32 @@
+@{
+    ViewData["Title"] = "Sepetim";
+}
+
+<section class="page-intro">
+    <a class="back-link" asp-controller="Products" asp-action="Index">← Alışverişe Devam Et</a>
+    <div class="title-row"><h1>Sepetim <span class="title-count" data-cart-count>0</span></h1></div>
+    <p>Ürünlerinizi kontrol edin ve teslimat adresinizi girerek siparişinizi oluşturun.</p>
+</section>
+<section class="cart-layout" data-page="cart">
+    <div class="cart-content">
+        <div class="cart-list-heading"><span>ÜRÜN</span><span>ADET / TUTAR</span></div>
+        <div class="cart-lines" data-cart-lines aria-live="polite"></div>
+        <div class="empty-cart" data-cart-empty hidden>
+            <div><h2>Sepetiniz şu anda boş.</h2><p>Ürünleri inceleyip beğendiklerinizi sepetinize ekleyebilirsiniz.</p><a class="btn btn-outline-primary secondary-action" asp-controller="Products" asp-action="Index">Ürünleri İncele</a></div>
+            <img src="~/images/products/vase.png" alt="Seramik vazo" />
+        </div>
+        <div class="state-card error" data-cart-error hidden>Sepet bilgileri alınamadı.</div>
+    </div>
+    <aside class="checkout-panel">
+        <div class="checkout-heading"><h2>Sipariş Özeti</h2></div>
+        <dl class="summary-list"><div><dt>Ürün adedi</dt><dd data-cart-quantity>0</dd></div><div class="summary-total"><dt>Toplam</dt><dd data-cart-total>₺0,00</dd></div></dl>
+        <p class="tax-note">KDV dahildir.</p>
+        <form data-checkout-form>
+            <label class="form-label" for="delivery-address">Teslimat Adresi</label>
+            <textarea class="form-control" id="delivery-address" name="deliveryAddress" rows="4" required minlength="10" autocomplete="street-address" placeholder="Mahalle, sokak, bina no, ilçe / il"></textarea>
+            <button class="btn btn-primary primary-action full-width" type="submit" data-checkout-button>Siparişi Oluştur</button>
+        </form>
+        <p class="checkout-note">Bu bir demo mağazadır. Sipariş sırasında ödeme bilgisi istenmez.</p>
+        <p class="form-note" data-checkout-message aria-live="polite"></p>
+    </aside>
+</section>

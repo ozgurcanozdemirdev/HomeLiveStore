@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "Üye Ol";
+}
+
+<section class="auth-shell" data-page="register" data-return-url="@ViewData["ReturnUrl"]">
+    <div class="page-intro"><p class="eyebrow">Hesabım</p><h1>Üye Ol</h1><p>Hesabınızı oluşturun, siparişlerinizi tek yerden takip edin.</p></div>
+    <div class="auth-layout">
+        <form class="auth-card" data-register-form>
+            <div class="two-column">
+                <div><label class="form-label" for="register-name">Ad</label><input class="form-control" id="register-name" name="name" autocomplete="given-name" required /></div>
+                <div><label class="form-label" for="register-surname">Soyad</label><input class="form-control" id="register-surname" name="surname" autocomplete="family-name" required /></div>
+            </div>
+            <label class="form-label" for="register-email">E-posta</label>
+            <input class="form-control" id="register-email" name="email" type="email" autocomplete="email" placeholder="ornek@eposta.com" required />
+            <label class="form-label" for="register-password">Şifre</label>
+            <input class="form-control" id="register-password" name="password" type="password" autocomplete="new-password" minlength="6" aria-describedby="password-help" required />
+            <p class="form-help mt-2 mb-0" id="password-help">En az 6 karakter kullanın.</p>
+            <button class="btn btn-primary primary-action full-width" type="submit">Üye Ol</button>
+            <p class="form-note" data-auth-message aria-live="polite"></p>
+            <a class="auth-switch" asp-controller="Account" asp-action="Login">Zaten hesabınız var mı? Giriş Yap</a>
+        </form>
+        <aside class="auth-copy"><h2>Günlük yaşama güzel seçimler.</h2><p>Ürünleri keşfedin, sepetinizi oluşturun ve siparişlerinizi hesabınızdan izleyin.</p><img src="~/images/products/blanket.png" alt="Pamuk battaniye" /></aside>
+    </div>
+</section>

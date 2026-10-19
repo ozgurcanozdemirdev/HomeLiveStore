@@ -1,0 +1,6 @@
+{
+  "name": "homelivestore-browser-checks",
+  "private": true,
+  "scripts": { "test": "node regressions.cjs" },
+  "devDependencies": { "playwright": "1.62.1" }
+}

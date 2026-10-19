@@ -1,0 +1,12 @@
+@model ErrorViewModel
+@{
+    ViewData["Title"] = "İşlem Tamamlanamadı";
+}
+<section class="error-content">
+    <div class="page-intro"><p class="eyebrow">Bir sorun oluştu</p><h1>İşlem tamamlanamadı.</h1><p>Lütfen yeniden deneyin veya ana sayfaya dönün.</p></div>
+    <a class="btn btn-primary primary-action" asp-controller="Home" asp-action="Index">Ana Sayfaya Dön</a>
+    @if (Model.ShowRequestId)
+    {
+        <p class="form-help mt-4">İşlem kodu: <code>@Model.RequestId</code></p>
+    }
+</section>

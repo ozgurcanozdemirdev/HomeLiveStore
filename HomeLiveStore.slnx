@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="Giris.txt" />
+  </Folder>
+  <Project Path="HomeLiveStore.Api/HomeLiveStore.Api.csproj" />
+  <Project Path="HomeLiveStore.Application/HomeLiveStore.Application.csproj" />
+  <Project Path="HomeLiveStore.Domain/HomeLiveStore.Domain.csproj" />
+  <Project Path="HomeLiveStore.Infrastructure/HomeLiveStore.Infrastructure.csproj" />
+  <Project Path="HomeLiveStore.Web/HomeLiveStore.Web.csproj" />
+  <Project Path="tests/IntegrationChecks/IntegrationChecks.csproj" />
+  <Project Path="tests/DomainChecks/DomainChecks.csproj" />
+</Solution>

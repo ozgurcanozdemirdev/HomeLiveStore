@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 390" role="img" aria-label="Seramik vazo">
+  <rect width="520" height="390" fill="#efe2cf"/>
+  <path d="M245 88h70c-14 50-8 76 28 112 34 34 40 100 4 130-38 32-136 32-174 0-36-30-30-96 4-130 36-36 42-62 28-112z" fill="#fffaf2" stroke="#174d38" stroke-width="10"/>
+  <path d="M215 160c38 24 84 24 122 0M195 250c46 30 130 30 176 0" fill="none" stroke="#b86b4b" stroke-width="8"/>
+  <path d="M260 86c-4-42 18-72 66-88" fill="none" stroke="#174d38" stroke-width="10" stroke-linecap="round"/>
+</svg>

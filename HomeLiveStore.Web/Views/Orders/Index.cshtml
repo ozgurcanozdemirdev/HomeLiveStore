@@ -1,0 +1,10 @@
+@{
+    ViewData["Title"] = "Siparişlerim";
+}
+
+<section class="page-intro"><p class="eyebrow">Hesabım</p><h1>Siparişlerim</h1><p>Sipariş detaylarını inceleyebilir, hazırlanan siparişlerinizi iptal edebilirsiniz.</p></section>
+<section data-page="orders">
+    <div class="table-wrap"><table class="table data-table"><thead><tr><th>No</th><th>Tarih</th><th>Durum</th><th>Toplam</th><th>İşlem</th></tr></thead><tbody data-orders-list></tbody></table></div>
+    <div class="state-card" data-orders-empty hidden>Henüz siparişiniz yok. <a class="text-link" asp-controller="Products" asp-action="Index">Ürünleri inceleyin →</a></div>
+    <div class="state-card error" data-orders-error hidden>Siparişler alınamadı. Lütfen yeniden deneyin.</div>
+</section>

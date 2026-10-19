@@ -1,0 +1,22 @@
+@{
+    ViewData["Title"] = "Ürünler";
+}
+
+<section class="page-intro">
+    <p class="eyebrow">Home &amp; Living Store / Ürünler</p>
+    <h1>Ürünler</h1>
+    <p>Ev, mutfak ve ofis ürünlerini inceleyin; kategoriye, ada veya fiyata göre seçim yapın.</p>
+</section>
+<section class="catalog-layout" data-page="products">
+    <aside class="filter-panel" aria-label="Ürün filtreleri">
+        <div><label class="form-label" for="product-search">Ürün Ara</label><input class="form-control" id="product-search" type="search" data-product-search placeholder="Ürün adı veya barkod" autocomplete="off" /></div>
+        <div><label class="form-label" for="category-filter">Kategori</label><select class="form-select" id="category-filter" data-category-filter></select></div>
+        <div><label class="form-label" for="sort-filter">Sıralama</label><select class="form-select" id="sort-filter" data-sort-filter><option value="newest">En yeni</option><option value="priceAsc">Fiyat artan</option><option value="priceDesc">Fiyat azalan</option><option value="name">Ada göre</option></select></div>
+    </aside>
+    <div class="catalog-results">
+        <div class="result-toolbar"><span data-product-summary>Ürünler yükleniyor...</span><div class="pager" data-product-pager aria-label="Ürün sayfaları"></div></div>
+        <div class="product-grid" data-product-list aria-live="polite"></div>
+        <div class="state-card" data-product-empty hidden>Bu filtrelerle ürün bulunamadı.</div>
+        <div class="state-card error" data-product-error hidden>Ürünler alınamadı. Lütfen yeniden deneyin.</div>
+    </div>
+</section>

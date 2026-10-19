@@ -1,0 +1,101 @@
+@baseUrl = http://localhost:5101
+@csrf = paste-token-from-csrf-response
+@requestId = 00000000-0000-0000-0000-000000000001
+
+### Health
+GET {{baseUrl}}/health
+
+### CSRF token
+GET {{baseUrl}}/api/auth/csrf
+
+### Login as demo customer
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+X-CSRF-TOKEN: {{csrf}}
+
+{
+  "email": "musteri@homelivestore.local",
+  "password": "Musteri123!"
+}
+
+### Current user
+GET {{baseUrl}}/api/auth/me
+
+### Public categories
+GET {{baseUrl}}/api/categories
+
+### Public products
+GET {{baseUrl}}/api/products?search=&sort=newest&page=1&pageSize=12
+
+### Product detail
+GET {{baseUrl}}/api/products/1
+
+### Create order
+POST {{baseUrl}}/api/orders
+Content-Type: application/json
+X-CSRF-TOKEN: {{csrf}}
+
+{
+  "deliveryAddress": "Ornek teslimat adresi",
+  "requestId": "{{requestId}}",
+  "orderLines": [
+    { "productId": 1, "quantity": 2 }
+  ]
+}
+
+### My orders
+GET {{baseUrl}}/api/orders
+
+### Cancel order
+POST {{baseUrl}}/api/orders/1/cancel
+X-CSRF-TOKEN: {{csrf}}
+
+### Login as demo manager
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+X-CSRF-TOKEN: {{csrf}}
+
+{
+  "email": "admin@homelivestore.local",
+  "password": "Admin123!"
+}
+
+### Admin dashboard
+GET {{baseUrl}}/api/admin/dashboard
+
+### Admin users
+GET {{baseUrl}}/api/admin/users
+
+### Admin products
+GET {{baseUrl}}/api/admin/products?page=1&pageSize=12
+
+### Admin categories
+GET {{baseUrl}}/api/admin/categories
+
+### Create category
+POST {{baseUrl}}/api/admin/categories
+Content-Type: application/json
+X-CSRF-TOKEN: {{csrf}}
+
+{
+  "definition": "Yeni Kategori",
+  "description": "Admin test kategorisi",
+  "isActive": true
+}
+
+### Create product
+POST {{baseUrl}}/api/admin/products
+Content-Type: application/json
+X-CSRF-TOKEN: {{csrf}}
+
+{
+  "categoryId": 1,
+  "definition": "Yeni Urun",
+  "description": "Admin test urunu",
+  "barcode": "TEST-001",
+  "price": 100,
+  "vatRate": 20,
+  "stockAmount": 5,
+  "coverPhoto": "/images/test.svg",
+  "isActive": true
+}
